@@ -1,0 +1,149 @@
+:root {
+  --color1: #6f98a8;
+  --color2: #2b8ead;
+  --color3: #2f454e;
+  --color4: #bfbfbf;
+}
+
+body {
+  margin: 0;
+  background-color: #efefef;
+  font-family: Arial;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  font-weight: bold;
+  text-align: center;
+}
+
+.wrapper > * {
+  padding: 10px;
+  flex: 1 100%;
+}
+
+.main {
+  flex: 3 0px;
+}
+.aside {
+  flex: 1 0 0;
+}
+.main {
+  order: 1;
+}
+.aside {
+  order: 2;
+}
+.footer {
+  order: 3;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid .box {
+  flex: 1 0 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 5vw;
+  color: #fff;
+}
+
+.one,
+.eight {
+  background-color: var(--color1);
+}
+
+.two,
+.four {
+  background-color: var(--color2);
+}
+
+.three,
+.five,
+.nine {
+  background-color: var(--color3);
+}
+
+.six,
+.seven {
+  background-color: var(--color4);
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button {
+  border: none;
+  color: white;
+  background-color: #72c3dc;
+  border-bottom: 5px solid #2b8ead;
+  text-transform: uppercase;
+  border-radius: 15px;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 10px;
+  cursor: pointer;
+  width: 80%;
+}
+
+@media only screen and (max-width: 375px) {
+  body {
+    background-color: #fff;
+  }
+
+  .header {
+    background-color: #333333;
+    color: #e0e0e0;
+  }
+
+  .button-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .grid .box {
+    max-width: 85vw;
+    min-width: 85vw;
+    height: 5vh;
+    color: #000;
+    background-color: #efefef;
+    margin: 2px 0;
+  }
+
+  .one,
+  .eight {
+    border-left: 10px solid var(--color1);
+  }
+
+  .two,
+  .four {
+    border-left: 10px solid var(--color2);
+  }
+
+  .three,
+  .five,
+  .nine {
+    border-left: 10px solid var(--color3);
+  }
+
+  .six,
+  .seven {
+    border-left: 10px solid var(--color4);
+  }
+
+  .main {
+    order: 2;
+  }
+  .aside {
+    order: 1;
+  }
+}
