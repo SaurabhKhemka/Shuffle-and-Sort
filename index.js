@@ -1,4 +1,4 @@
-const parent = document.getElementsById("parent");
+const parent = document.getElementById("parent");
 
 let children = Array.prototype.slice.call(parent[0].children[0].children),
     dummyDiv,
